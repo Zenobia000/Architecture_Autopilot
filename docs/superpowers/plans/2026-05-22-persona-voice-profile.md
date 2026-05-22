@@ -137,7 +137,7 @@ EOF
 
 - [ ] **Step 2: 加 Voice 段到 devteam-pm/SKILL.md**
 
-先 Read 該檔確認 `## 任務` 段位置，在「## 任務」之前插入：
+先 Read 該檔確認 frontmatter 結束位置與第一個 `#` H1 heading 位置（devteam SKILL.md 沒有 `## 任務` heading），在 frontmatter 後、第一個 H1 heading 之前插入：
 
 ```markdown
 ## Voice
@@ -186,7 +186,7 @@ git commit -m "feat(devteam-pm): wire PM persona + driver to voice-profiles"
 
 - [ ] **Step 2: 加 Voice 段到 devteam-design/SKILL.md**
 
-devteam-design 主筆 sd + dba 兩個 persona。先 Read 該檔，在 `## 任務` 之前插入：
+devteam-design 主筆 sd + dba 兩個 persona。先 Read 該檔確認 frontmatter 結束位置與第一個 H1 heading 位置，在 frontmatter 後、第一個 H1 之前插入：
 
 ```markdown
 ## Voice
@@ -235,7 +235,7 @@ git commit -m "feat(devteam-design): wire DBA persona + design driver to voice-p
 
 - [ ] **Step 2: 加 Voice 段到 devteam-ux/SKILL.md**
 
-devteam-ux 主筆 ux + ui。Read 該檔，在 `## 任務` 之前插入：
+devteam-ux 主筆 ux + ui。Read 該檔確認 frontmatter 結束位置與第一個 H1 heading 位置，在 frontmatter 後、第一個 H1 之前插入：
 
 ```markdown
 ## Voice
@@ -579,7 +579,7 @@ git commit -m "feat(agents): wire remaining 9 persona agents to voice-profiles"
 
 - [ ] **Step 1: devteam-analyst/SKILL.md 加 Voice 段**
 
-Read 該檔確認 `## 任務` 段位置，在前插入：
+Read 該檔確認 frontmatter 結束位置與第一個 H1 heading 位置（devteam SKILL.md 沒有 `## 任務` heading），在 frontmatter 後、第一個 H1 之前插入：
 
 ```markdown
 ## Voice
