@@ -29,5 +29,6 @@ tmp/
 
 # DevTeam runtime / 業主使用 harness 產出的 working data
 .claude/context/
-docs/
+docs/*
+!docs/superpowers/
 MODIFICATION-PLAN.md
