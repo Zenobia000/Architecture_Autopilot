@@ -26,8 +26,10 @@ Thumbs.db
 tmp/
 *.tmp
 *.bak
+image.png
 
 # DevTeam runtime / 業主使用 harness 產出的 working data
 .claude/context/
+.claude/scheduled_tasks.lock
 docs/
 MODIFICATION-PLAN.md
