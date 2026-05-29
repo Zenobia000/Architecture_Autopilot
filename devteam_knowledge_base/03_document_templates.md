@@ -15,6 +15,7 @@
 | `c4-l2.md` | `docs/architecture/c4-l2-<feature>.md` | devteam-arch | arch | P2 Architecture |
 | `c4-l3.md` | `docs/architecture/c4-l3-<feature>.md` | devteam-arch | arch | P2 Architecture（按需） |
 | `adr.md` | `docs/architecture/adr/ADR-<NNN>-<topic>.md` | devteam-arch | arch | 任何架構決策 |
+| `threat-model.md` | `docs/security/threat-model-<feature>.md` | devteam-arch | arch | P2 Architecture（**條件式**：資料分級觸發，掛 Gate 4；見 [`04_freeze_gates.md` §Gate 4 Threat Model 觸發規則](04_freeze_gates.md）。linter C4/C6 以此路徑驗 TC-SEC） |
 | `decision-record.md` | `docs/architecture/dr/DR-<NNN>-<topic>.md` | 對應 driver | 對應 persona | 非架構決策（產品/流程） |
 | `openapi.yaml` | `docs/api/openapi-<service>.yaml` | devteam-design | sd | P3 Design |
 | `erd.md` | `docs/data/erd-<feature>.md` | devteam-design | dba | P3 Design |
@@ -22,6 +23,21 @@
 | `runbook.md` | `docs/ops/runbook-<service>.md` | devteam-ops | devops | P5 Release |
 | `release-readiness.md` | `docs/release/readiness-<date>.md` | devteam-ops | sre | P5 Release |
 | `handoff.md` | `specs/<feature>/handoff.md` | (router 內建) | — | Gate 7 後 |
+
+---
+
+## 流程 / 機制 / 追溯範本（非 phase 交付物）
+
+上表是 phase driver 產的規範文件。以下範本服務 review 機制、Forum/Roundtable、與跨文件追溯，不綁單一 phase：
+
+| 範本檔案 | 對應位置 | 產出者 | 何時用 |
+|:---------|:---------|:-------|:-------|
+| `fr-skeleton.md` | `docs/_source/FR-<NNNN>.md` | devteam-analyst / pm | FR 殼（含 `mapped_to`/`emits_events`/`superseded_clauses` frontmatter，供追溯 tool 聚合） |
+| `traceability-matrix.md` | `docs/traceability-matrix.md` | tool（聚合各 doc frontmatter） | FR↔BR↔ADR↔Event 三向追溯；QA/audit/Lane A 看 orphan |
+| `review-report.md` | `.claude/context/devteam/reviews/<gate>-<feature>-<date>.md` | devteam-orchestrator | Lane A critique 合併報告 |
+| `forum-topic.md` | `.claude/context/devteam/forum/<topic-id>/topic.md` | devteam-proposer + critics | Lane B 議題元資料 |
+| `forum-final-report.md` | `.claude/context/devteam/forum/<topic-id>/final-report.md` | devteam-facilitator | Lane B 收斂或升級報告 |
+| `mom.md` | `meetings/<id>/MoM.md` | devteam-roundtable | Lane C 圓桌 MoM（業主主要閱讀產出） |
 
 ---
 
